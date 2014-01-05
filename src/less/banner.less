@@ -1,0 +1,64 @@
+.main-title,
+.main-subtitle {
+  .text-center;
+}
+
+.main-subtitle {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.social-icons {
+  .text-center;
+
+  img {
+    display: inline-block;
+    margin: 0 0.5em;
+  }
+}
+
+#banner {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    .gradient(@sky-top, @white);
+  }
+
+  .info{
+    position: relative;
+    z-index: 5;
+  }
+}
+
+#clouds {
+  .pan-background(url(../img/clouds@2x.png), 30s, 1);
+  background-position: top;
+}
+
+#bushes {
+  .pan-background(url(../img/bushes@2x.png), 25s, 2);
+}
+
+#street {
+  .pan-background(url(../img/street@2x.png), 20s, 3);
+}
+
+#megaman {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+#front-lights {
+  .pan-background(url(../img/front-lights@2x.png), 12s, 6);
+  pointer-events: none;
+}

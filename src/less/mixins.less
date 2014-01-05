@@ -1,0 +1,135 @@
+.border-radius(@radius: 0) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.gradient(@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.arrow-down(@width: 5px, @color: black) {
+  width: 0;
+  height: 0;
+  border-left: @width solid transparent;
+  border-right: @width solid transparent;
+  border-top: @width solid @color;
+}
+
+.transform(@property) {
+  -webkit-transform: @property;
+  -moz-transform: @property;
+  -ms-transform: @property;
+  -o-transform: @property;
+  transform: @property;
+}
+
+.animation(@parameters) {
+  -webkit-animation: @parameters;
+  -moz-animation: @parameters;
+  -o-animation: @parameters;
+  animation: @parameters;
+}
+
+.animation-paused {
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  -o-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.pan-background(@src, @duration, @z-index) {
+  z-index: @z-index;
+  background-image: @src;
+  position: absolute;
+  .transform(translate3d(0, 0, 0));
+  top: 0;
+  width: 3000px;
+  height: 100%;
+  .animation(pan @duration linear infinite);
+}
+
+@-webkit-keyframes pan {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+  }
+}
+
+@-moz-keyframes pan {
+  0% {
+    -moz-transform: translateX(0);
+  }
+  100% {
+    -moz-transform: translateX(-1000px);
+  }
+}
+
+@-o-keyframes pan {
+  0% {
+    -o-transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(-1000px);
+  }
+}
+
+@keyframes pan {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000px);
+  }
+}
+
+.blink {
+  .animation(blink 1s linear infinite alternate);
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

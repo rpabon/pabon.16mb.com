@@ -1,0 +1,31 @@
+{
+  "name": "pabon.16mb.com",
+  "version": "0.0.0",
+  "authors": [
+    "rpabon <rpabon257@gmail.com>"
+  ],
+  "description": "personal homepage",
+  "main": "index.html",
+  "keywords": [
+    "megaman",
+    "portfolio",
+    "homepage"
+  ],
+  "license": "MIT",
+  "homepage": "http://pabon.16mb.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.0.3",
+    "kineticjs": "~4.7.3",
+    "bootstrap": "~3.0.3",
+    "intentionjs": "~0.9.9",
+    "underscore": "~1.5.2",
+    "hoverintent": "*"
+  }
+}
