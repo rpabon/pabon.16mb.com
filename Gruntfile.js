@@ -97,25 +97,8 @@ module.exports = function(grunt) {
 
     // validate JavaScript code
     jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        devel: true,
-        node: true,
-        jquery: true,
-        globals: {
-          'Kinetic': false
-        }
+      options:{
+        jshintrc: '.jshintrc'
       },
       all: {
         src: ['Gruntfile.js', '<%= globalConfig.src %>/js/*.js']
@@ -131,11 +114,15 @@ module.exports = function(grunt) {
       vendor_js: {
         src: [
           'bower_components/jquery/jquery.js',
+          'bower_components/jqueryui/ui/jquery.ui.core.js',
+          'bower_components/jqueryui/ui/jquery.ui.widget.js',
+          'bower_components/jqueryui/ui/jquery.ui.mouse.js',
+          'bower_components/jqueryui/ui/jquery.ui.draggable.js',
+          'bower_components/jqueryui/ui/jquery.ui.effects.js',
           'bower_components/hoverintent/jquery.hoverIntent.js',
           'bower_components/underscore/underscore.js', // dependency of intentionjs
           'bower_components/intentionjs/intention.js', // support of retina images
-          'bower_components/intentionjs/context.js', // support of retina images
-          'bower_components/kineticjs/dist/kinetic-dev.js'
+          'bower_components/intentionjs/context.js' // support of retina images
         ],
         dest: '<%= globalConfig.dest %>/js/vendor.js'
       },
@@ -262,7 +249,7 @@ module.exports = function(grunt) {
         auth: {
           host: 'ftp.pabon.16mb.com',
           port: 21,
-          authKey: 'key1'
+          authKey: 'key1' //see .ftppass
         },
         src: '<%= globalConfig.dest %>',
         dest: '/test',

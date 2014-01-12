@@ -21,11 +21,11 @@
     "tests"
   ],
   "devDependencies": {
-    "jquery": "~2.0.3",
-    "kineticjs": "~4.7.3",
     "bootstrap": "~3.0.3",
     "intentionjs": "~0.9.9",
     "underscore": "~1.5.2",
-    "hoverintent": "*"
+    "hoverintent": "*",
+    "jquery": "~2.0.3",
+    "jqueryui": "~1.10.3"
   }
 }

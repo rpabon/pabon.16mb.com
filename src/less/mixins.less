@@ -4,7 +4,7 @@
   border-radius: @radius;
 }
 
-.gradient(@startColor: #eee, @endColor: white) {
+.gradient(@startColor: @skytop, @endColor: @white) {
   background-color: @startColor;
   background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
   background: -webkit-linear-gradient(top, @startColor, @endColor);
@@ -32,6 +32,7 @@
 .animation(@parameters) {
   -webkit-animation: @parameters;
   -moz-animation: @parameters;
+  -ms-animation: @parameters;
   -o-animation: @parameters;
   animation: @parameters;
 }
@@ -39,97 +40,45 @@
 .animation-paused {
   -webkit-animation-play-state: paused !important;
   -moz-animation-play-state: paused !important;
+  -ms-animation-play-state: paused !important;
   -o-animation-play-state: paused !important;
   animation-play-state: paused !important;
 }
 
-.pan-background(@src, @duration, @z-index) {
-  z-index: @z-index;
-  background-image: @src;
-  position: absolute;
-  .transform(translate3d(0, 0, 0));
-  top: 0;
-  width: 3000px;
-  height: 100%;
+.pan-background(@duration) {
   .animation(pan @duration linear infinite);
 }
 
-@-webkit-keyframes pan {
-  0% {
-    -webkit-transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-  }
-}
-
-@-moz-keyframes pan {
-  0% {
-    -moz-transform: translateX(0);
-  }
-  100% {
-    -moz-transform: translateX(-1000px);
-  }
-}
-
-@-o-keyframes pan {
-  0% {
-    -o-transform: translateX(0);
-  }
-  100% {
-    -o-transform: translateX(-1000px);
-  }
-}
-
-@keyframes pan {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-1000px);
-  }
-}
-
 .blink {
-  .animation(blink 1s linear infinite alternate);
+  .animation(blink 1.5s steps(2, start) infinite);
 }
 
-@-webkit-keyframes blink {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+/* Megaman animations */
+.intro {
+  .animation(intro-animation .8s steps(6));
 }
 
-@-moz-keyframes blink {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+.run {
+  .animation(run-animation .8s steps(10) infinite);
 }
 
-@-o-keyframes blink {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+.idle {
+  .animation(idle-animation 1s steps(5) infinite);
 }
 
-@keyframes blink {
-  from {
-    opacity: 1;
-  }
+.falling {
+  .animation(fall-animation 1s steps(3));
+}
 
-  to {
-    opacity: 0;
-  }
+/* Metool animations */
+.metool-intro {
+  .animation(metool-intro-animation .4s steps(3))
+}
+
+.metool-run {
+  .animation(metool-run-animation .3s steps(2) infinite)
+}
+
+.metool-copter {
+  .animation(metool-copter-animation .1s steps(3) infinite)
 }
