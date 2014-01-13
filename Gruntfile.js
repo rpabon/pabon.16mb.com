@@ -114,12 +114,12 @@ module.exports = function(grunt) {
       vendor_js: {
         src: [
           'bower_components/jquery/jquery.js',
-          'bower_components/jqueryui/ui/jquery.ui.core.js',
-          'bower_components/jqueryui/ui/jquery.ui.widget.js',
-          'bower_components/jqueryui/ui/jquery.ui.mouse.js',
-          'bower_components/jqueryui/ui/jquery.ui.draggable.js',
-          'bower_components/jqueryui/ui/jquery.ui.effects.js',
-          'bower_components/hoverintent/jquery.hoverIntent.js',
+          'bower_components/jqueryui/ui/jquery.ui.core.js', //dependency for draggable
+          'bower_components/jqueryui/ui/jquery.ui.widget.js', //dependency for draggable
+          'bower_components/jqueryui/ui/jquery.ui.mouse.js', //dependency for draggable
+          'bower_components/jqueryui/ui/jquery.ui.draggable.js', //draggable
+          'bower_components/jqueryui/ui/jquery.ui.effects.js', //easing
+          'bower_components/hoverintent/jquery.hoverIntent.js', //hover intent
           'bower_components/underscore/underscore.js', // dependency of intentionjs
           'bower_components/intentionjs/intention.js', // support of retina images
           'bower_components/intentionjs/context.js' // support of retina images
@@ -155,11 +155,15 @@ module.exports = function(grunt) {
         files:{
           '<%= globalConfig.dest %>/js/vendor.js': [
                                                     'bower_components/jquery/jquery.js',
-                                                    'bower_components/hoverintent/jquery.hoverIntent.js',
+                                                    'bower_components/jqueryui/ui/jquery.ui.core.js', //dependency for draggable
+                                                    'bower_components/jqueryui/ui/jquery.ui.widget.js', //dependency for draggable
+                                                    'bower_components/jqueryui/ui/jquery.ui.mouse.js', //dependency for draggable
+                                                    'bower_components/jqueryui/ui/jquery.ui.draggable.js', // draggable
+                                                    'bower_components/jqueryui/ui/jquery.ui.effects.js', //easing
+                                                    'bower_components/hoverintent/jquery.hoverIntent.js', //hover intent
                                                     'bower_components/underscore/underscore.js', // dependency of intentionjs
                                                     'bower_components/intentionjs/intention.js', // support of retina images
-                                                    'bower_components/intentionjs/context.js', // support of retina images
-                                                    'bower_components/kineticjs/dist/kinetic-dev.js'
+                                                    'bower_components/intentionjs/context.js' // support of retina images
                                                   ],
           '<%= globalConfig.dest %>/js/main.js': ['<%= globalConfig.src %>/js/*.js']
         }
