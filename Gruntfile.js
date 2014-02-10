@@ -118,7 +118,7 @@ module.exports = function(grunt) {
           'bower_components/jqueryui/ui/jquery.ui.widget.js', //dependency for draggable
           'bower_components/jqueryui/ui/jquery.ui.mouse.js', //dependency for draggable
           'bower_components/jqueryui/ui/jquery.ui.draggable.js', //draggable
-          'bower_components/jqueryui/ui/jquery.ui.effects.js', //easing
+          'bower_components/jqueryui/ui/jquery.ui.effect.js', //easing
           'bower_components/hoverintent/jquery.hoverIntent.js', //hover intent
           'bower_components/underscore/underscore.js', // dependency of intentionjs
           'bower_components/intentionjs/intention.js', // support of retina images
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
                                                     'bower_components/jqueryui/ui/jquery.ui.widget.js', //dependency for draggable
                                                     'bower_components/jqueryui/ui/jquery.ui.mouse.js', //dependency for draggable
                                                     'bower_components/jqueryui/ui/jquery.ui.draggable.js', // draggable
-                                                    'bower_components/jqueryui/ui/jquery.ui.effects.js', //easing
+                                                    'bower_components/jqueryui/ui/jquery.ui.effect.js', //easing
                                                     'bower_components/hoverintent/jquery.hoverIntent.js', //hover intent
                                                     'bower_components/underscore/underscore.js', // dependency of intentionjs
                                                     'bower_components/intentionjs/intention.js', // support of retina images
@@ -206,7 +206,7 @@ module.exports = function(grunt) {
         livereload: LIVERELOAD_PORT
       },
       js: {
-        files: '<%= jshint.all.src %>',
+        files: ['<%= jshint.all.src %>', '.jshintrc'],
         tasks: ['default', 'concat', 'less:dev']
       },
       less: {

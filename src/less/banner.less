@@ -18,6 +18,7 @@
 }
 
 #banner {
+  min-height: 90%;
   position: relative;
   overflow: hidden;
   height: 400px;
@@ -100,17 +101,17 @@
     .idle;
   }
 
-  &.grabbed{
+  &.grabbed {
     cursor: url('../img/cursor_grab_closed.png') 23 23, auto;
     background-position: 700px -420px;
   }
 
-  &.falling{
+  &.falling {
     background-position: 700px -560px;
   }
 }
 
-#metool{
+#metool {
   background-image: url('../img/megaman-sprites@2x.png');
   background-position: 420px 0px;
   position: absolute;
@@ -120,23 +121,23 @@
   right: 8em;
   .transform(translate3d(0, 0, 0));
 
-  &.intro{
+  &.intro {
     .metool-intro;
   }
 
-  &.run{
+  &.run {
     .metool-run;
   }
 }
 
-#metool-copter{
+#metool-copter {
   background-image: url('../img/megaman-sprites@2x.png');
-  position: fixed;
-  z-index: 4;
+  position: absolute;
+  z-index: 10;
   width: 140px;
   height: 140px;
-  left: 2em;
-  top: 0;
+  left: 150px;
+  top: 150px;
   .transform(translate3d(0, 0, 0));
   .metool-copter;
 }
