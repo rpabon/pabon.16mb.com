@@ -1,3 +1,4 @@
+
 # global module: false
 module.exports = (grunt) ->
 
@@ -106,6 +107,13 @@ module.exports = (grunt) ->
           cwd: "<%= globalConfig.src %>/img"
           src: ["**"]
           dest: "<%= globalConfig.dest %>/img"
+        ]
+      fonts:
+        files: [
+          expand: true
+          cwd: "bower_components/fontawesome/fonts"
+          src: ["**"]
+          dest: "<%= globalConfig.dest %>/fonts"
         ]
 
     #remove unused CSS
