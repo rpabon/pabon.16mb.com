@@ -1,0 +1,36 @@
+.navbar
+  min-height: 0
+  margin-bottom: 0
+  background-color: $teal
+  color: $white
+  height: rhythm(2)
+  +trailer(1)
+
+.navbar-header
+  display: inline
+
+.navbar-right
+  float: right
+
+.navbar-nav
+  @extend %gamma
+
+  & > li
+    display: inline
+    list-style-type: none
+
+    & > a
+      color: $white
+      padding-left: rhythm(0.25)
+
+      & > i
+        @extend .fa
+
+        &.tuiter
+          @extend .fa-twitter
+
+        &.linked
+          @extend .fa-linkedin
+
+        &.github
+          @extend .fa-github

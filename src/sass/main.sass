@@ -1,7 +1,18 @@
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap"
-@import "../../bower_components/fontawesome/scss/font-awesome"
+@import "compass"
 
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables"
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins"
+
+// override bootstrap variables
 @import "helpers/variables"
 @import "helpers/mixins"
+@import "helpers/helpers"
 
-@import "custom"
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/normalize"
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding"
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/grid"
+
+@import "../../bower_components/fontawesome/scss/font-awesome"
+
+@import "generic/global"
+@import "generic/header"

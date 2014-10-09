@@ -1,15 +1,11 @@
-header.navbar.navbar-static-top.rpabon-nav(role='banner')
+header.navbar
   .container
     .row
-      .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.rpabon-nav')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+      .col-md-6
         a(href='/').logo
-          img.img-responsive(src='img/logo.png', alt='logo.png')
-      nav.collapse.navbar-collapse.bs-navbar-collapse(role='navigation')
-        ul.nav.navbar-nav.navbar-right
-          li: a(href="#"): i.fa.fa-linkedin
-          li: a(href="#"): i.fa.fa-github
+          img(src='img/logo.png', alt='logo.png')
+      .col-md-6
+        ul.navbar-nav.text-right
+          li: a(href="#"): i.tuiter
+          li: a(href="#"): i.github
+          li: a(href="#"): i.linked
