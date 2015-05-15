@@ -9,8 +9,9 @@ config =
     html:
       src: "#{basePaths.src}/jade/*.jade"
       dest: basePaths.dest
-    css:
-      src: "#{basePaths.src}/less/main.less"
+    less:
+      src: "#{basePaths.src}/less/*.less"
+      srcMain: "#{basePaths.src}/less/main.less"
       dest: "#{basePaths.dest}/css"
     js:
       src: "#{basePaths.src}/js/*.js"
